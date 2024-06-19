@@ -26,7 +26,7 @@ This project demonstrates a reverse shell implementation using Winsock and WinAP
 1. Clone the repository to your local machine.
 2. Open the project in Visual Studio.
 3. Build the project to generate the executable.
-4. Run the executable (`RevShell.exe`).
+4. Run the executable (`system_shell.exe`).
 5. The program will attempt to connect to a specified IP address (`192.168.1.103`) and port (`1337`).
 6. Ensure that a listening server is set up to receive the reverse shell connection.
 
